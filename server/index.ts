@@ -6,15 +6,15 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function startServer() {
+export function setupApp(customStaticPath?: string) {
   const app = express();
-  const server = createServer(app);
 
   // Serve static files from dist/public in production
   const staticPath =
-    process.env.NODE_ENV === "production"
+    customStaticPath ||
+    (process.env.NODE_ENV === "production"
       ? path.resolve(__dirname, "public")
-      : path.resolve(__dirname, "..", "dist", "public");
+      : path.resolve(__dirname, "..", "dist", "public"));
 
   app.use(express.static(staticPath));
 
@@ -23,6 +23,13 @@ async function startServer() {
     res.sendFile(path.join(staticPath, "index.html"));
   });
 
+  return app;
+}
+
+async function startServer() {
+  const app = setupApp();
+  const server = createServer(app);
+
   const port = process.env.PORT || 3000;
 
   server.listen(port, () => {
@@ -30,4 +37,6 @@ async function startServer() {
   });
 }
 
-startServer().catch(console.error);
+if (process.env.NODE_ENV !== "test") {
+  startServer().catch(console.error);
+}
