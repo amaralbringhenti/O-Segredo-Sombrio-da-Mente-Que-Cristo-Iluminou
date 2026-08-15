@@ -1,3 +1,4 @@
+import React from "react";
 /* Design Philosophy: Iluminismo Espiritual Contemporâneo
  * - Contraste Luminoso: Dourado/branco vs roxo profundo/preto
  * - Assimetria Intencional: Layouts diagonais e sobreposições
@@ -19,6 +20,101 @@ import {
   CheckCircle2,
   Quote
 } from "lucide-react";
+
+const PAINS = [
+  "Pensamentos de culpa que não desaparecem, mesmo após oração",
+  "Medo e ansiedade que sabotam sua vida espiritual",
+  "Padrões mentais antigos que parecem impossíveis de quebrar",
+  "Sensação de estar preso entre fé e dúvida constante"
+];
+
+const BOOK_PARTS = [
+  {
+    icon: Brain,
+    title: "Fundamentos da Transformação",
+    subtitle: "Parte 1",
+    description: "Entenda o segredo sombrio da mente e como Cristo reescreve sua identidade através da neuroplasticidade espiritual.",
+    color: "from-purple-600 to-purple-800"
+  },
+  {
+    icon: Heart,
+    title: "A Jornada da Identidade",
+    subtitle: "Parte 2",
+    description: "Reencontre a consciência do Céu e descubra quem você realmente é em Cristo, além da culpa e do medo.",
+    color: "from-amber-500 to-amber-700"
+  },
+  {
+    icon: Sparkles,
+    title: "O Chamado da Manifestação",
+    subtitle: "Parte 3",
+    description: "Viva o Reino na Terra com a mente de Cristo em ação, transformando graça em estado mental permanente.",
+    color: "from-purple-700 to-amber-600"
+  }
+];
+
+const BENEFITS = [
+  {
+    title: "Renovação Mental Baseada em Neurociência",
+    description: "Aprenda como a contemplação de Cristo ativa novos circuitos de percepção através da neuroplasticidade espiritual."
+  },
+  {
+    title: "Libertação da Culpa e do Medo",
+    description: "Descubra como o perdão é o código da reconstrução interior, reduzindo cortisol e aumentando bem-estar."
+  },
+  {
+    title: "Identidade Renovada em Cristo",
+    description: "Pare de tentar ser santo e desperte para quem você já é: uma nova criação, reflexo da glória de Deus."
+  },
+  {
+    title: "Práticas de PNL e Coaching Cristão",
+    description: "Exercícios práticos ao final de cada capítulo para aplicar os princípios e transformar sua vida diária."
+  },
+  {
+    title: "Integração de Fé e Ciência",
+    description: "Entenda como a mecânica quântica ilustra como a fé molda a realidade e transforma vidas de forma mensurável."
+  }
+];
+
+const TESTIMONIALS = [
+  {
+    quote: "Este livro mudou completamente minha perspectiva sobre renovação mental. A forma como Marcio integra neurociência e fé é revolucionária!",
+    author: "Ana Paula S.",
+    role: "Psicóloga Cristã"
+  },
+  {
+    quote: "Finalmente entendi como minha mente pode ser transformada de verdade. Os exercícios práticos fizeram toda a diferença na minha jornada espiritual.",
+    author: "Carlos Eduardo M.",
+    role: "Pastor"
+  },
+  {
+    quote: "Profundo, prático e transformador. Cada capítulo trouxe revelações que me libertaram de padrões mentais antigos. Recomendo fortemente!",
+    author: "Juliana R.",
+    role: "Coach de Vida"
+  }
+];
+
+const FAQS = [
+  {
+    q: "Este livro é baseado na Bíblia?",
+    a: "Sim! Cada princípio está ancorado nas Escrituras. A Bíblia é a autoridade máxima, e este livro é uma ferramenta de apoio para ajudá-lo a crescer espiritualmente."
+  },
+  {
+    q: "Preciso ter conhecimento em neurociência para entender?",
+    a: "Não! O livro foi escrito de forma acessível para qualquer pessoa. Os conceitos científicos são explicados de maneira simples e sempre conectados à fé cristã."
+  },
+  {
+    q: "Como este livro é diferente de outros sobre desenvolvimento pessoal?",
+    a: "Este livro integra neurociência, PNL, coaching e hipnose conversacional com princípios bíblicos sólidos. Não é autoajuda secular, mas transformação fundamentada em Cristo."
+  },
+  {
+    q: "O livro substitui acompanhamento profissional?",
+    a: "Não. Se você enfrenta desafios de saúde física ou emocional, busque profissionais qualificados. Este livro é um recurso complementar para fortalecer sua fé e renovar sua mente."
+  },
+  {
+    q: "Em quanto tempo verei resultados?",
+    a: "A transformação é um processo. Com dedicação aos exercícios práticos e abertura ao Espírito Santo, muitos leitores relatam mudanças significativas nas primeiras semanas."
+  }
+];
 
 export default function Home() {
   return (
@@ -119,12 +215,7 @@ export default function Home() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6 text-left">
-              {[
-                "Pensamentos de culpa que não desaparecem, mesmo após oração",
-                "Medo e ansiedade que sabotam sua vida espiritual",
-                "Padrões mentais antigos que parecem impossíveis de quebrar",
-                "Sensação de estar preso entre fé e dúvida constante"
-              ].map((pain, idx) => (
+              {PAINS.map((pain, idx) => (
                 <Card key={idx} className="bg-purple-900/30 border-purple-700/50 backdrop-blur-sm">
                   <CardContent className="p-6 flex items-start gap-4">
                     <div className="w-2 h-2 rounded-full bg-amber-400 mt-2 flex-shrink-0" />
@@ -197,29 +288,7 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                icon: Brain,
-                title: "Fundamentos da Transformação",
-                subtitle: "Parte 1",
-                description: "Entenda o segredo sombrio da mente e como Cristo reescreve sua identidade através da neuroplasticidade espiritual.",
-                color: "from-purple-600 to-purple-800"
-              },
-              {
-                icon: Heart,
-                title: "A Jornada da Identidade",
-                subtitle: "Parte 2",
-                description: "Reencontre a consciência do Céu e descubra quem você realmente é em Cristo, além da culpa e do medo.",
-                color: "from-amber-500 to-amber-700"
-              },
-              {
-                icon: Sparkles,
-                title: "O Chamado da Manifestação",
-                subtitle: "Parte 3",
-                description: "Viva o Reino na Terra com a mente de Cristo em ação, transformando graça em estado mental permanente.",
-                color: "from-purple-700 to-amber-600"
-              }
-            ].map((part, idx) => (
+            {BOOK_PARTS.map((part, idx) => (
               <Card key={idx} className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-8 space-y-4">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${part.color} flex items-center justify-center`}>
@@ -246,28 +315,7 @@ export default function Home() {
             </h2>
             
             <div className="space-y-6">
-              {[
-                {
-                  title: "Renovação Mental Baseada em Neurociência",
-                  description: "Aprenda como a contemplação de Cristo ativa novos circuitos de percepção através da neuroplasticidade espiritual."
-                },
-                {
-                  title: "Libertação da Culpa e do Medo",
-                  description: "Descubra como o perdão é o código da reconstrução interior, reduzindo cortisol e aumentando bem-estar."
-                },
-                {
-                  title: "Identidade Renovada em Cristo",
-                  description: "Pare de tentar ser santo e desperte para quem você já é: uma nova criação, reflexo da glória de Deus."
-                },
-                {
-                  title: "Práticas de PNL e Coaching Cristão",
-                  description: "Exercícios práticos ao final de cada capítulo para aplicar os princípios e transformar sua vida diária."
-                },
-                {
-                  title: "Integração de Fé e Ciência",
-                  description: "Entenda como a mecânica quântica ilustra como a fé molda a realidade e transforma vidas de forma mensurável."
-                }
-              ].map((benefit, idx) => (
+              {BENEFITS.map((benefit, idx) => (
                 <div key={idx} className="flex items-start gap-4 p-6 bg-purple-800/30 rounded-xl border border-purple-700/50 backdrop-blur-sm hover:bg-purple-800/50 transition-all">
                   <CheckCircle2 className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
                   <div>
@@ -375,23 +423,7 @@ export default function Home() {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                quote: "Este livro mudou completamente minha perspectiva sobre renovação mental. A forma como Marcio integra neurociência e fé é revolucionária!",
-                author: "Ana Paula S.",
-                role: "Psicóloga Cristã"
-              },
-              {
-                quote: "Finalmente entendi como minha mente pode ser transformada de verdade. Os exercícios práticos fizeram toda a diferença na minha jornada espiritual.",
-                author: "Carlos Eduardo M.",
-                role: "Pastor"
-              },
-              {
-                quote: "Profundo, prático e transformador. Cada capítulo trouxe revelações que me libertaram de padrões mentais antigos. Recomendo fortemente!",
-                author: "Juliana R.",
-                role: "Coach de Vida"
-              }
-            ].map((testimonial, idx) => (
+            {TESTIMONIALS.map((testimonial, idx) => (
               <Card key={idx} className="bg-white/10 backdrop-blur-lg border-purple-700/50 hover:bg-white/15 transition-all">
                 <CardContent className="p-6 space-y-4">
                   <Quote className="w-8 h-8 text-amber-400" />
@@ -418,28 +450,7 @@ export default function Home() {
             </h2>
             
             <div className="space-y-6">
-              {[
-                {
-                  q: "Este livro é baseado na Bíblia?",
-                  a: "Sim! Cada princípio está ancorado nas Escrituras. A Bíblia é a autoridade máxima, e este livro é uma ferramenta de apoio para ajudá-lo a crescer espiritualmente."
-                },
-                {
-                  q: "Preciso ter conhecimento em neurociência para entender?",
-                  a: "Não! O livro foi escrito de forma acessível para qualquer pessoa. Os conceitos científicos são explicados de maneira simples e sempre conectados à fé cristã."
-                },
-                {
-                  q: "Como este livro é diferente de outros sobre desenvolvimento pessoal?",
-                  a: "Este livro integra neurociência, PNL, coaching e hipnose conversacional com princípios bíblicos sólidos. Não é autoajuda secular, mas transformação fundamentada em Cristo."
-                },
-                {
-                  q: "O livro substitui acompanhamento profissional?",
-                  a: "Não. Se você enfrenta desafios de saúde física ou emocional, busque profissionais qualificados. Este livro é um recurso complementar para fortalecer sua fé e renovar sua mente."
-                },
-                {
-                  q: "Em quanto tempo verei resultados?",
-                  a: "A transformação é um processo. Com dedicação aos exercícios práticos e abertura ao Espírito Santo, muitos leitores relatam mudanças significativas nas primeiras semanas."
-                }
-              ].map((faq, idx) => (
+              {FAQS.map((faq, idx) => (
                 <Card key={idx} className="border-2 hover:shadow-lg transition-all">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-purple-950 mb-3">{faq.q}</h3>
