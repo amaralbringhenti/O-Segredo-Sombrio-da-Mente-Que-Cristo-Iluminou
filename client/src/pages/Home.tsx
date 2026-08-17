@@ -74,36 +74,40 @@ export default function Home() {
                 <a href="https://loja.uiclap.com/titulo/ua141374/" target="_blank" rel="noopener noreferrer">
                   <BookOpen className="w-5 h-5 mr-2" />
                   Comprar na Uiclap
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
               
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg px-8 py-6 border-2 border-amber-400 text-amber-300 hover:bg-amber-500/20 hover:text-amber-200 font-semibold backdrop-blur-sm"
+                className="text-lg px-8 py-6 border-2 border-amber-400 text-amber-300 hover:bg-amber-500/20 hover:text-amber-200 font-semibold backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-950"
                 asChild
               >
                 <a href="https://www.amazon.com.br/dp/B0GDRV8823" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-5 h-5 mr-2" />
                   Comprar na Amazon
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
             </div>
             
             {/* Social Proof */}
             <div className="flex items-center justify-center gap-2 text-amber-200/80 text-sm pt-4">
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+              <div role="img" aria-label="Avaliação: 5 de 5 estrelas" className="flex">
+                <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+              </div>
               <span className="ml-2">Livro 196 de 10.000 da Editora Bringhenti</span>
             </div>
           </div>
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
           <div className="w-6 h-10 border-2 border-amber-400/50 rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-2 bg-amber-400 rounded-full" />
           </div>
@@ -333,21 +337,23 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4 pt-6">
                     <Button 
                       variant="outline" 
-                      className="border-amber-400 text-amber-300 hover:bg-amber-500/20"
+                      className="border-amber-400 text-amber-300 hover:bg-amber-500/20 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-950"
                       asChild
                     >
                       <a href="https://bringhenti.com.br" target="_blank" rel="noopener noreferrer">
                         Conheça Mais
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     </Button>
                     
                     <Button 
                       variant="outline" 
-                      className="border-amber-400 text-amber-300 hover:bg-amber-500/20"
+                      className="border-amber-400 text-amber-300 hover:bg-amber-500/20 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-950"
                       asChild
                     >
                       <a href="https://MarcioBringhenti.com.br" target="_blank" rel="noopener noreferrer">
                         Treinamentos
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     </Button>
                   </div>
@@ -490,18 +496,20 @@ export default function Home() {
                 <a href="https://loja.uiclap.com/titulo/ua141374/" target="_blank" rel="noopener noreferrer">
                   <BookOpen className="w-6 h-6 mr-2" />
                   Comprar na Uiclap Agora
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
               
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-xl px-10 py-7 border-2 border-amber-400 text-amber-300 hover:bg-amber-500/20 hover:text-amber-200 font-semibold backdrop-blur-sm"
+                className="text-xl px-10 py-7 border-2 border-amber-400 text-amber-300 hover:bg-amber-500/20 hover:text-amber-200 font-semibold backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-950"
                 asChild
               >
                 <a href="https://www.amazon.com.br/dp/B0GDRV8823" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-6 h-6 mr-2" />
                   Comprar na Amazon
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
             </div>
@@ -528,13 +536,15 @@ export default function Home() {
               <h3 className="text-white font-bold text-lg mb-4">Links Úteis</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://bringhenti.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  <a href="https://bringhenti.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">
                     Site do Autor
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://MarcioBringhenti.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  <a href="https://MarcioBringhenti.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">
                     Treinamentos e Mentoria
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               </ul>
@@ -544,13 +554,15 @@ export default function Home() {
               <h3 className="text-white font-bold text-lg mb-4">Onde Comprar</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="https://loja.uiclap.com/titulo/ua141374/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  <a href="https://loja.uiclap.com/titulo/ua141374/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">
                     Loja Uiclap
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.amazon.com.br/dp/B0GDRV8823" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                  <a href="https://www.amazon.com.br/dp/B0GDRV8823" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm">
                     Amazon Brasil
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               </ul>
