@@ -89,6 +89,7 @@ export default function Home() {
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   Comprar na Uiclap
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
 
@@ -105,6 +106,7 @@ export default function Home() {
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
                   Comprar na Amazon
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
             </div>
@@ -408,6 +410,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                       >
                         Conheça Mais
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     </Button>
 
@@ -422,6 +425,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                       >
                         Treinamentos
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     </Button>
                   </div>
@@ -587,6 +591,7 @@ export default function Home() {
                 >
                   <BookOpen className="w-6 h-6 mr-2" />
                   Comprar na Uiclap Agora
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
 
@@ -603,6 +608,7 @@ export default function Home() {
                 >
                   <ExternalLink className="w-6 h-6 mr-2" />
                   Comprar na Amazon
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
             </div>
@@ -639,6 +645,7 @@ export default function Home() {
                     className="hover:text-amber-400 transition-colors"
                   >
                     Site do Autor
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
                 <li>
@@ -649,6 +656,7 @@ export default function Home() {
                     className="hover:text-amber-400 transition-colors"
                   >
                     Treinamentos e Mentoria
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               </ul>
@@ -667,6 +675,7 @@ export default function Home() {
                     className="hover:text-amber-400 transition-colors"
                   >
                     Loja Uiclap
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
                 <li>
@@ -677,6 +686,7 @@ export default function Home() {
                     className="hover:text-amber-400 transition-colors"
                   >
                     Amazon Brasil
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               </ul>
