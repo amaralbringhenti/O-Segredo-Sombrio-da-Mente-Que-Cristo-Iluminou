@@ -87,8 +87,9 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <BookOpen className="w-5 h-5 mr-2" />
+                  <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
                   Comprar na Uiclap
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
 
@@ -103,8 +104,9 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ExternalLink className="w-5 h-5 mr-2" />
+                  <ExternalLink className="w-5 h-5 mr-2" aria-hidden="true" />
                   Comprar na Amazon
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
             </div>
@@ -408,6 +410,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                       >
                         Conheça Mais
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     </Button>
 
@@ -422,6 +425,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                       >
                         Treinamentos
+                        <span className="sr-only"> (abre em nova aba)</span>
                       </a>
                     </Button>
                   </div>
@@ -585,8 +589,9 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <BookOpen className="w-6 h-6 mr-2" />
+                  <BookOpen className="w-6 h-6 mr-2" aria-hidden="true" />
                   Comprar na Uiclap Agora
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
 
@@ -601,8 +606,9 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ExternalLink className="w-6 h-6 mr-2" />
+                  <ExternalLink className="w-6 h-6 mr-2" aria-hidden="true" />
                   Comprar na Amazon
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </Button>
             </div>
@@ -636,9 +642,10 @@ export default function Home() {
                     href="https://bringhenti.com.br"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-400 transition-colors"
+                    className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                   >
                     Site do Autor
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
                 <li>
@@ -646,9 +653,10 @@ export default function Home() {
                     href="https://MarcioBringhenti.com.br"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-400 transition-colors"
+                    className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                   >
                     Treinamentos e Mentoria
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               </ul>
@@ -664,9 +672,10 @@ export default function Home() {
                     href="https://loja.uiclap.com/titulo/ua141374/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-400 transition-colors"
+                    className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                   >
                     Loja Uiclap
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
                 <li>
@@ -674,9 +683,10 @@ export default function Home() {
                     href="https://www.amazon.com.br/dp/B0GDRV8823"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-400 transition-colors"
+                    className="hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
                   >
                     Amazon Brasil
+                    <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 </li>
               </ul>
