@@ -27,8 +27,22 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const scrollToMain = () => {
+    const mainContent = document.getElementById("main-content");
+    if (mainContent) {
+      mainContent.scrollIntoView({ behavior: "smooth" });
+      mainContent.focus();
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-purple-950 focus:font-bold focus:rounded-md focus:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+      >
+        Pular para o conteúdo principal
+      </a>
       {/* Hero Section - Dramatic entrance with divine light */}
       <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-black"
@@ -125,14 +139,22 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-amber-400/50 rounded-full flex items-start justify-center p-2">
+          <button
+            onClick={scrollToMain}
+            aria-label="Rolar para o conteúdo principal"
+            className="w-6 h-10 border-2 border-amber-400/50 rounded-full flex items-start justify-center p-2 cursor-pointer hover:border-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 transition-colors"
+          >
             <div className="w-1 h-2 bg-amber-400 rounded-full" />
-          </div>
+          </button>
         </div>
       </section>
 
       {/* Problem Section - Identifying the pain */}
-      <section className="py-24 bg-gradient-to-b from-black to-purple-950 text-white">
+      <section
+        id="main-content"
+        tabIndex={-1}
+        className="py-24 bg-gradient-to-b from-black to-purple-950 text-white focus:outline-none"
+      >
         <div className="container">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <h2 className="text-4xl md:text-5xl font-bold">
