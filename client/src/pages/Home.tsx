@@ -124,15 +124,22 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <a
+          href="#problema"
+          aria-label="Rolar para a próxima seção"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce block rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+        >
           <div className="w-6 h-10 border-2 border-amber-400/50 rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-2 bg-amber-400 rounded-full" />
           </div>
-        </div>
+        </a>
       </section>
 
       {/* Problem Section - Identifying the pain */}
-      <section className="py-24 bg-gradient-to-b from-black to-purple-950 text-white">
+      <section
+        id="problema"
+        className="py-24 bg-gradient-to-b from-black to-purple-950 text-white"
+      >
         <div className="container">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <h2 className="text-4xl md:text-5xl font-bold">
